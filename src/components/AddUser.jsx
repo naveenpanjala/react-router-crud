@@ -62,37 +62,34 @@ const AddUser = () => {
       method: "PUT",
       headers: {
         Authorization:
-          "Bearer 0f7f63fc3e5c46a17aee89dcc3e8739bb022f16000616a9d6e657c350aa75c1a",
+        "Bearer 0f7f63fc3e5c46a17aee89dcc3e8739bb022f16000616a9d6e657c350aa75c1a",
         "Content-Type": "application/json",
       },
       body: JSON.stringify(user),
     })
-      .then((response) => {
-        window.alert("Updated Successfully", response.status);
-      })
-      .catch((error) => {
+    .then((response) => {
+      window.alert("data is exist", response.status);
+    })
+    .catch((error) => {
         setupdateError(error);
       });
   };
-
-
-
-
+  
   const addData = (data) => {
     fetch(`https://gorest.co.in/public/v2/users`, {
       method: "POST",
       headers: {
         Authorization:
-          "Bearer 0f7f63fc3e5c46a17aee89dcc3e8739bb022f16000616a9d6e657c350aa75c1a",
+        "Bearer 0f7f63fc3e5c46a17aee89dcc3e8739bb022f16000616a9d6e657c350aa75c1a",
         "Content-Type": "application/json",
       },
       body: JSON.stringify(data),
     })
-      .then((response) => {
-        window.alert("Data added Successfully", response.status);
-      })
-      .catch((error) => {
-        setsaveError(error);
+    .then((response) => {
+      window.alert("data is exist", response.status);
+    })
+    .catch((error) => {
+      setsaveError(error);
       });
   };
 
@@ -191,7 +188,6 @@ const AddUser = () => {
               value={email}
               onChange={handleChange}
             />
-            {/* email */}
             <br />
           </label>
           <br />
@@ -235,6 +231,7 @@ const AddUser = () => {
               <option value="inactive">Inactive</option>
             </select>
           </label>
+
           <br />
           <button type="submit" className="btn btn-primary">
             Submit
