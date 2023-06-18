@@ -75,6 +75,9 @@ const AddUser = () => {
       });
   };
 
+
+
+
   const addData = (data) => {
     fetch(`https://gorest.co.in/public/v2/users`, {
       method: "POST",
@@ -188,6 +191,7 @@ const AddUser = () => {
               value={email}
               onChange={handleChange}
             />
+            {/* email */}
             <br />
           </label>
           <br />
